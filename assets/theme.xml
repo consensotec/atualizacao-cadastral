@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rendertheme xmlns="http://mapsforge.org/renderTheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://mapsforge.org/renderTheme renderTheme.xsd" version="4" map-background="#FFEE99" map-background-outside="#FFEE99">
+
+    <!-- https://github.com/mapsforge/mapsforge/blob/master/mapsforge-map/src/main/resources/osmarender/osmarender.xml -->
+
+    <!-- Lote -->
+    <rule e="way" k="highway" v="footway">
+        <line stroke="#0000FE" stroke-width="0.1" />
+    </rule>
+    
+    <!-- Edificacao -->
+    <rule e="way" k="highway" v="pedestrian">
+        <line stroke="#FE00FE" stroke-width="0.1" />
+    </rule>
+
+    <!-- Piscina -->
+    <rule e="way" k="highway" v="path">
+        <line stroke="#00FEFE" stroke-width="0.1" />
+    </rule>
+
+    <!-- Numero do Lote -->
+    <rule e="way" k="highway" v="service">
+        <line stroke="#CBCBCB" stroke-width="0.1" />
+    </rule>
+
+    <!-- Desconhecido -->
+    <rule e="way" k="highway" v="unclassified">
+        <line stroke="#333333" stroke-width="0.1" />
+    </rule>
+
+    <!-- Ponto do Numero do Lote -->
+    <rule e="node" k="amenity" v="*" zoom-min="18">
+       	<caption k="name" font-style="bold" font-size="16" fill="#FFFFFF" stroke="#000000" stroke-width="2.5" display="always" priority="100" position="center"/>
+    </rule>
+
+</rendertheme>

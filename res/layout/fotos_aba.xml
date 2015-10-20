@@ -1,0 +1,147 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:scrollbars="vertical"
+    tools:context=".FotosAbaActivity" >
+    
+     <LinearLayout android:orientation="vertical" android:layout_width="fill_parent"
+ 			  android:layout_height="wrap_content" android:paddingTop="8dp">
+    
+	    <!-- Data -->
+	    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent"
+	    			  android:layout_height="wrap_content" >
+	        <TextView
+                style="@style/labelAba"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:paddingLeft="0dip"
+	            android:text="@string/str_data"
+	            android:textStyle="bold" />
+	        
+	     	<TextView
+                style="@style/labelAba"
+	     	    android:id="@+id/tvData"
+	     	    android:layout_width="150dp"
+	     	    android:layout_height="wrap_content"
+	            android:paddingLeft="5dip" />
+	        
+	    </LinearLayout>
+
+	    <TableLayout android:paddingTop="8dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <!-- Foto Frente da Casa -->
+	        <TableRow android:gravity="center_vertical">
+	            <!-- Frente da Casa -->
+	          	<LinearLayout android:id="@+id/llFrenteCasa" android:orientation="horizontal" 
+	        		  android:layout_weight="1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
+	    
+			    	<ImageView android:id="@+id/imgFrenteCasa" android:contentDescription="@string/str_frente_casa" 
+			    	    	   android:layout_width="wrap_content" android:layout_height="wrap_content" />
+			    	
+			    	<TextView
+			    	    android:id="@+id/tvFrenteCasa"
+			    	    android:layout_width="fill_parent"
+			    	    android:layout_height="wrap_content"
+			    	    android:text="@string/str_frente_casa"
+			    	    style="@style/labelAba"
+			    	    android:textStyle="bold" 
+			    	  	android:paddingLeft="6dp"/>
+	    
+	   			</LinearLayout>	
+
+	 			<Button
+				    android:id="@+id/btnExcluirFrenteCasa"
+				    android:layout_width="90dp"
+				    android:layout_height="wrap_content"
+				    android:background="@drawable/botao_bg_selector"
+				    android:text="@string/str_excluir"
+				    android:textColor="#000000" />
+
+	        </TableRow>
+
+	        <!-- Linha -->
+	        <TableRow
+	            android:gravity="center_vertical"
+	            android:paddingTop="10dp"
+	            android:paddingBottom="10dp" >
+	            <View
+	                android:layout_width="fill_parent"
+	                android:layout_height="2dp"
+	                android:layout_weight="1"
+	                android:background="#A8A8A8"
+	                android:paddingLeft="20dp"
+	                android:paddingRight="20dp" />
+	        </TableRow>
+
+            <!-- Foto do Hidrômetro -->
+	        <TableRow android:gravity="center_vertical">
+	        
+			    <LinearLayout android:orientation="horizontal"
+				              android:id="@+id/llHidrometro" android:layout_weight="1" android:layout_height="wrap_content" android:gravity="center_vertical">
+			    
+			    	<ImageView android:id="@+id/imgHidrometro" android:contentDescription="@string/str_hidrometro" 
+			    	    	   android:layout_width="wrap_content" android:layout_height="wrap_content" />
+			    	
+			    	<TextView
+			    	    android:id="@+id/tvHidrometro"
+			    	    android:layout_width="fill_parent"
+			    	    android:layout_height="wrap_content"
+			    	    android:text="@string/str_hidrometro"
+			    	    android:textStyle="bold" 
+			    	    style="@style/labelAba"
+			    	    android:paddingLeft="6dp" />
+	
+			    </LinearLayout>
+			        	
+			    	<Button
+			    	    android:id="@+id/btnExcluirHidrometro"
+			    	    android:layout_width="90dp"
+			    	    android:layout_height="wrap_content"
+			    	    android:background="@drawable/botao_bg_selector"
+			    	    android:text="@string/str_excluir"
+			    	    android:textColor="#000000" />
+			    	
+	        </TableRow>
+
+	        <!-- Linha -->
+	        <TableRow
+	            android:gravity="center_vertical"
+	            android:paddingTop="10dp"
+	            android:paddingBottom="10dp" >
+	            <View
+	                android:layout_width="fill_parent"
+	                android:layout_height="2dp"
+	                android:layout_weight="1"
+	                android:background="#A8A8A8"
+	                android:paddingLeft="20dp"
+	                android:paddingRight="20dp" />
+	        </TableRow>
+	    </TableLayout>
+	
+	    <!-- Ocorrencias -->
+	    <Spinner android:layout_width="fill_parent" android:layout_marginTop="10dp" android:layout_marginBottom="10dp" android:layout_height="60dp" 
+			 android:id="@+id/spnOcorrencias" android:paddingBottom="5dp" />  
+		
+			<TableLayout
+				android:orientation="horizontal" android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:background="@drawable/fundo_bg_branco" >
+		      		
+	      		<TextView android:text="@string/str_lista_ocorrencias"
+	      				  android:paddingTop="5dp" android:textStyle="bold" style="@style/labelAbaMenor"/>
+	      		
+	      		<View
+				    android:id="@+id/linha"
+				    android:layout_width="fill_parent"
+				    android:layout_height="2dp"
+				    android:background="#394f73"
+		     	/>
+	      		
+			<TableLayout android:id="@+id/tabelaOcorrencias" android:layout_width="fill_parent" android:layout_height="wrap_content" 
+						 android:stretchColumns="0" />
+		</TableLayout>
+	</LinearLayout>
+</ScrollView>

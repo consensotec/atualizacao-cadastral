@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="AtualizacaoCadastral" default="build">
+	<!--
+	The following will prevent for 'android' tool to overwrite this file.
+	version-tag:custom
+	-->
+
+	<!-- CONFIGURACAO DO-BUILD ANDROID -->
+	<property file="local.properties"/>
+	<property file="ant.properties"/>
+	<property environment="env"/>
+	<property name="src" value="src"/>
+
+	<condition property="sdk.dir" value="${env.ANDROID_HOME}">
+		<isset property="env.ANDROID_HOME"/>
+	</condition>
+
+	<loadproperties srcFile="project.properties"/>
+	<fail message="sdk.dir is missing. Make sure to generate local.properties using 'android update project' or to inject it through the ANDROID_HOME environment variable." unless="sdk.dir"/>
+
+	<target name="check-properties">
+		<script language="javascript">
+		<![CDATA[
+			var echo = project.createTask("echo");
+			function print(msg) {
+				echo.setMessage(msg);
+				echo.perform();
+			}
+
+			function check(prop, regex, msgInvalid) {
+				var p = project.getProperty(prop);
+				if (!p || !(p = p.trim()).length()) return;
+				print(prop + " = '" + p + "'");
+				if(regex && !regex.test(p)) {
+					print(msgInvalid);
+					project.setProperty("prop.invalid", true);
+					return;
+				}
+				project.setProperty(prop + ".valid", p);
+			}
+
+			check("servidor.url");
+			check("proxy.url");
+			check("proxy.port", /^\d{1,5}$/, "A porta deve conter apenas numeros ate cinco digitos");
+			check("app.version");
+
+			// definir app.version.code
+			var v = project.getProperty("app.version.valid");
+			if(v && (v = v.replaceAll('\\D', '').trim())) {
+				print("app.version.code = '" + v + "'");
+				project.setProperty("app.version.code", v);
+			}
+		]]>
+		</script>
+
+		<fail if="prop.invalid"/>
+	</target>
+
+	<!-- SERVIDOR URL -->
+	<target name="set-servidor-url" if="servidor.url.valid">
+		<replaceregexp
+			file="${src}/com/br/gsanac/utilitarios/ConstantesSistema.java"
+			match="SERVIDOR_URL\s*=.*"
+			replace="SERVIDOR_URL = &quot;${servidor.url.valid}&quot;;"/>
+	</target>
+
+	<!-- PROXY URL -->
+	<target name="set-proxy-url" if="proxy.url.valid">
+		<replaceregexp
+			file="${src}/com/br/gsanac/utilitarios/ConstantesSistema.java"
+			match="PROXY_URL\s*=.*"
+			replace="PROXY_URL = &quot;${proxy.url.valid}&quot;;"/>
+	</target>
+
+	<!-- PROXY PORT -->
+	<target name="set-proxy-port" if="proxy.port.valid">
+		<replaceregexp
+			file="${src}/com/br/gsanac/utilitarios/ConstantesSistema.java"
+			match="PROXY_PORT\s*=.*"
+			replace="PROXY_PORT = ${proxy.port.valid};"/>
+	</target>
+
+	<!-- APP VERSION -->
+	<target name="set-app-version" if="app.version.valid">
+		<replaceregexp
+			file="AndroidManifest.xml"
+			match="android:versionName\s*=.*"
+			replace="android:versionName=&quot;${app.version.valid}&quot;"/>
+	</target>
+
+	<!-- APP VERSION CODE-->
+	<target name="set-app-version-code" if="app.version.code">
+		<replaceregexp
+			file="AndroidManifest.xml"
+			match="android:versionCode\s*=.*"
+			replace="android:versionCode=&quot;${app.version.code}&quot;"/>
+	</target>
+
+	<!-- PRE-BUILD -->
+	<target depends="
+		check-properties,
+		set-servidor-url,
+		set-proxy-url,
+		set-proxy-port,
+		set-app-version,
+		set-app-version-code" name="-pre-build"/>
+
+	<import file="${sdk.dir}/tools/ant/build.xml"/>
+</project>

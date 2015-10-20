@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/fundocinza_bg" >
+   
+	<!-- HEAD -->
+	<LinearLayout android:layout_width="fill_parent"  android:layout_height="wrap_content"
+    	android:orientation="horizontal"  android:background="@drawable/fundopreto_bg">
+ 
+		<ImageView  android:layout_width="wrap_content"  android:src="@drawable/chart_bar" android:padding="6px"
+			android:layout_height="wrap_content" android:layout_marginRight="10dip" android:gravity="right" />
+		    
+	    <TextView android:layout_width="fill_parent" android:gravity="left" android:textSize="25sp" 
+			android:padding="6px"  android:layout_height="wrap_content" android:text="@string/str_menu_relatorio" android:textColor="#ffffff" />
+   
+    </LinearLayout>		
+	
+	<!-- TOTAL -->
+	<LinearLayout android:layout_width="fill_parent"  android:layout_height="wrap_content"
+    	android:orientation="horizontal" android:paddingTop="6dip" android:paddingLeft="6dip">
+		
+		<TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textColor="#000000" android:textSize="25sp" 
+	        android:text="@string/str_total_imoveis" />
+			
+		
+		<TextView
+	        android:id="@+id/totalImoveis"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textColor="#000000" android:textSize="25sp" 
+	        android:paddingLeft="45dp"/>
+
+	</LinearLayout>
+	
+	<!--ATUALIZADOS -->
+    <LinearLayout android:layout_width="fill_parent"  android:layout_height="wrap_content"
+    	android:orientation="horizontal" android:paddingLeft="6dip">
+    	
+    	<TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textColor="#000000" android:textSize="25sp" 
+	        android:text="@string/str_total_imoveis_atualizados" />
+
+		<TextView
+        	android:id="@+id/totalImoveisAtualizados"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:textColor="#000000" android:textSize="25sp"
+        	android:paddingLeft="10dp"/>
+	
+	</LinearLayout>
+	
+    <!--INCLUIDOS -->
+    <LinearLayout android:layout_width="fill_parent"  android:layout_height="wrap_content"
+    	android:orientation="horizontal" android:paddingLeft="6dip">
+    	
+    	<TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textColor="#000000" android:textSize="25sp" 
+	        android:text="@string/str_total_imoveis_incluidos" />
+
+		<TextView
+        	android:id="@+id/totalImoveisIncluidos"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:textColor="#000000" android:textSize="25sp" 
+			android:paddingLeft="40dp"/>
+	
+	</LinearLayout>
+	
+    <!--VISITADOS -->
+    <LinearLayout android:layout_width="fill_parent"  android:layout_height="wrap_content"
+    	android:orientation="horizontal" android:paddingLeft="6dip">
+    	
+    	<TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textColor="#000000" android:textSize="25sp" 
+	        android:text="@string/str_total_imoveis_visitados" />
+
+		<TextView
+        	android:id="@+id/totalImoveisVisitados"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:textColor="#000000" android:textSize="25sp"
+        	android:paddingLeft="38dp"/>
+	
+	</LinearLayout>
+	
+     <!--A VISITAR -->
+    <LinearLayout android:layout_width="fill_parent"  android:layout_height="wrap_content"
+    	android:orientation="horizontal" android:paddingLeft="6dip" android:paddingBottom="20dip">
+    	
+    	<TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textColor="#000000" android:textSize="25sp" 
+	        android:text="@string/str_total_imoveis_aVisitar" />
+
+		<TextView
+        	android:id="@+id/totalImoveisAvisitar"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:textColor="#000000" android:textSize="25sp"
+        	android:paddingLeft="50dp"/>
+	
+	</LinearLayout>
+	
+	 <!-- PERCENTUAL VISITADOS -->
+    <LinearLayout android:layout_width="fill_parent"  android:layout_height="wrap_content"
+    	android:orientation="horizontal" android:paddingLeft="6dip">
+	
+		<TextView
+	        android:id="@+id/percentualImoveisAtualizados" android:textColor="#000000"
+	        android:layout_width="wrap_content" android:textSize="25sp"
+	        android:layout_height="wrap_content" android:visibility="visible"/>
+
+	</LinearLayout>
+   
+    <!-- BARRA DE PROGRESSO -->
+	<LinearLayout android:layout_width="match_parent"  android:layout_height="30dip" 
+    	android:orientation="horizontal"  android:background="@drawable/borders"
+    	android:layout_marginRight="10dip" android:layout_marginLeft="8dip" android:layout_marginBottom="2dip"
+    	android:baselineAligned="false">
+		
+	    
+	    <LinearLayout  android:layout_width="fill_parent" android:layout_height="fill_parent"
+			android:layout_marginTop="1dip"
+	    	android:layout_marginBottom="1dip"
+	    	android:layout_marginLeft="2dip"
+	    	android:id="@+id/concluido"
+	    	android:orientation="horizontal" android:layout_weight="0.6"  android:background="#ADFF2F" >
+    	</LinearLayout>	
+    	
+	    <LinearLayout  android:layout_width="fill_parent" android:layout_height="fill_parent"
+	    	android:orientation="horizontal" android:layout_weight="0.4"  
+	    	android:layout_marginTop="1dip"
+	    	android:layout_marginBottom="1dip" 
+	    	android:layout_marginRight="1dip"
+	    	android:background="@drawable/fundocinza_bg"  
+	    	android:id="@+id/nao_concluido">
+   	    </LinearLayout>	
+    	
+    </LinearLayout>
+
+	<!-- Legenda barra progresso -->
+    <LinearLayout android:layout_width="fill_parent"  android:layout_height="wrap_content"
+    	android:orientation="horizontal" 
+    	android:gravity="center"  
+    	android:paddingLeft="6dip">
+	
+		<TextView
+	        android:id="@+id/legendaBarraProgresso" android:textColor="#000000"
+	        android:layout_width="wrap_content" android:textSize="20sp"
+	        android:layout_height="wrap_content"
+	        android:text="@string/str_legenda_barra_progresso"
+	        android:visibility="visible"/>
+
+	</LinearLayout>
+	
+	<LinearLayout android:id="@+id/paddingLayout" android:layout_width="fill_parent"  android:layout_height="0dp"
+    	android:orientation="horizontal" android:paddingTop="6dip" android:paddingLeft="6dip"
+    	 android:layout_weight="1" android:baselineAligned="false">
+	</LinearLayout>
+	
+	<!-- BOTÃO RESUMO POR OCORRENCIA -->
+	<LinearLayout android:layout_width="fill_parent"  android:layout_height="wrap_content" android:layout_marginTop="8dip" android:padding="3dip"
+    	android:orientation="horizontal" android:paddingLeft="20dip" android:gravity="center" android:background="@drawable/fundocinza_bg">
+    		
+		<Button
+		    android:id="@+id/btRelatorioPorOcorrencia"
+		    android:layout_width="240dip" android:gravity="center"
+		    android:text="@string/str_relatorio_resumo_ocorrencia" android:layout_gravity="center" android:layout_height="65dip" />
+	    
+	</LinearLayout>
+	<!-- BOTÃO VOLTAR -->
+	<LinearLayout android:layout_width="fill_parent"  android:layout_height="wrap_content" android:layout_marginTop="8dip" android:padding="3dip"
+    	android:orientation="horizontal" android:paddingLeft="20dip" android:gravity="center" android:background="@drawable/fundocinza_bg">
+	
+	    <Button
+		    android:id="@+id/btVoltar"
+		    android:layout_width="240dip" android:gravity="center"
+		    android:text="@string/str_voltar" android:layout_gravity="center" android:layout_height="65dip"/>
+	    
+	</LinearLayout>
+	
+	
+	
+    </LinearLayout>

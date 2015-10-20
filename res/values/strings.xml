@@ -1,0 +1,196 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+	<!-- Comum -->
+    <string name="app_name">GSAN Atualização Cadastral</string>
+    <string name="string_menu_sobre">Sobre</string>
+    <string name="string_carregar_arquivo_offline">Carregar Arquivo Offline</string>
+    <string name="string_transmitir_arquivo">Transmitir Arquivo Online</string>
+    <string name="string_logo">Logo</string>
+    <string name="str_adicionar">Adicionar</string>
+    <string name="str_concluir">Concluir</string>
+    <string name="str_salvar">Salvar</string>
+    <string name="str_cancelar">Cancelar</string>
+    <string name="str_inserir">Inserir</string>
+	<string name="string_atencao">ATENÇÃO</string>
+   	<string name="string_OK">OK</string>
+	<string name="str_processar">Processar Finalização</string>
+    <string name="string_descricao_imagem">Descrição</string>
+
+    <!-- selecionar_arquivo_offline_activity.xml -->
+	<string name="string_arquivos_offline_disponiveis">Arquivos offline disponíveis:</string>
+	<string name="string_nao_existe_arquivo_para_carregar">Nenhum arquivo para carregar.</string>
+	<string name="string_arquivo_invalido">Arquivo inválido</string>
+	<string name="string_arquivo_corrompido">Arquivo corrompido</string>
+	<string name="string_carregando_arquivo_offline">Carregando arquivo OFFLINE</string>
+	<string name="carregando">Carregando&#8230;</string>
+
+	<!-- roteiro_activity.xml -->
+	<string name="matricula">Matrícula:</string>
+	<string name="string_imoveis_spinner_todos">Todos</string>
+	<string name="string_imoveis_spinner_matricula_imovel">Matrícula do Imóvel</string>
+	<string name="string_imoveis_spinner_imoveis_pendentes">Imóveis Pendentes</string>
+	<string name="string_imoveis_spinner_posicao">Número de Ordem</string>
+	<string name="string_imoveis_spinner_novo_imovel">Imóvel Novo</string>
+    <string name="string_imoveis_spinner_numero_hidrometro">Número do Hidrômetro</string>
+    <string name="string_imoveis_spinner_cpfcnpj">CPF/CNPJ</string>
+    <string name="string_ja_existe_arquivo_carregado" tools:ignore="Typos">Já existe um arquivo carregado no momento.</string>
+
+    <!-- Tela Login -->
+    <string name="string_login">Login:</string>
+    <string name="string_senha">Senha:</string>
+    <string name="string_entrar">Entrar</string>
+    <string name="string_login_invalido">Login inválido</string>
+    <string name="string_erro_inesperado_carregamento_arquivo">Erro inesperado no carregamento do arquivo</string>
+    <string name="string_contato_administrador_sistema_erro_carregamento">Solicitamos que o arquivo seja carregado novamente, caso o erro persista entrar em contato com o administrador do sistema.</string>
+	<string name="string_informe_login">Informe o login</string>
+	<string name="string_informe_senha">Informe a senha</string>
+	<string name="string_arquivo_nao_disponivel_para_usuario">Não há arquivo disponível ao usuário - Online</string>
+	<string name="string_arquivo_pendente_transmitir">Existe arquivo pendente para transmissão. Favor utilizar a opção \"Transmitir Arquivo Online\" disponível no menu.</string>
+
+	<!-- Aba Imóvel -->
+	<string name="str_numero_medidor_energia">Num. Medidor Energia: </string>
+	<string name="str_numero_moradores">Num. de Moradores: </string>
+	<string name="str_pavimento_rua">Pavimento Rua: </string>
+	<string name="str_pavimento_calcada">Pavimento Calçada: </string>
+	<string name="str_fonte_abastecimento">Fonte de Abastecimento: </string>
+
+    <!-- Categorias do Imóvel -->
+	<string name="str_lista_categorias">Categorias </string>
+	<string name="str_categoria_imovel">Categoria: </string>
+	<string name="str_subcategoria_imovel">Subcategoria: </string>
+	<string name="str_quantidade_economias">Quantidade de Economias: </string>
+	<string name="str_label_categorias">Categoria </string>
+	<string name="str_label_sub_categorias">Subcategoria </string>
+	<string name="str_label_qtde_economias">Quantidade </string>
+	<string name="error_categoria_ja_selecionada">Esta Categoria já foi adicionada!</string>
+	<string name="msg_categoria_removida_sucesso">Categoria removida com sucesso!</string>
+	<string name="cabecalho_categoria">GSAN Atualização Cadastral - Adicionar Categoria</string>
+	<string name="str_preencher_campos">Preencha os campos abaixo: </string>
+
+    <!-- Aba Endereco -->
+    <string name="str_logradouro">Logradouro: </string>
+    <string name="str_referencia_numero">Referência/Número: </string>
+    <string name="str_complemento">Complemento: </string>
+    <string name="str_bairro">Bairro: </string>
+    <string name="str_cep">CEP: </string>
+    <string name="str_cep_desconhecido">CEP Desconhecido: </string>
+
+     <!-- LogradouroInserirActivity -->
+    <string name="str_tipo_logradouro">Tipo Logradouro: </string>
+    <string name="str_titulo_logradouro">Título Logradouro: </string>
+    <string name="str_nome">Nome: </string>
+    <string name="str_nome_popular_logradouro">Nome Popular: </string>
+    <string name="str_loteamento">Loteamento: </string>
+    <string name="str_municipio">Município: </string>
+    <string name="str_lista_bairros">Lista de Bairros: </string>
+    <string name="str_bairros">Bairros: </string>
+    <string name="error_bairro_ja_selecionado">Este Bairro já foi adicionado!</string>
+    <string name="msg_bairro_removido_sucesso">Bairro removido com sucesso!</string>
+    <string name="error_cep_ja_selecionado">Este CEP já foi adicionado!</string>
+    <string name="msg_cep_removido_sucesso">CEP removido com sucesso!</string>
+    <string name="cep_invalido">CEP Inválido</string>
+    <string name="str_lista_ceps">Lista de CEPs: </string>
+    <string name="cabecalho_logradouro">GSAN Atualização Cadastral - Inserir Logradouro</string>
+
+     <!-- Aba Cliente -->
+	<string name="str_cliente_tipo">Tipo de Cliente: </string>
+	<string name="str_pessoa_tipo">Tipo de Pessoa: </string>
+	<string name="str_pessoa_fisica">Física </string>
+	<string name="str_pessoa_juridica">Jurídica </string>
+	<string name="str_cpf_cnpj">CPF/CNPJ: </string>
+	<string name="str_nome_cliente">Nome do Cliente: </string>
+	<string name="str_nome_mae">Nome da Mãe: </string>
+	<string name="str_data_nascimento">Data de Nascimento: </string>
+	<string name="str_numero_rg">RG: </string>
+	<string name="str_orgao_expedidor">Órgão Expeditor: </string>
+	<string name="str_unidade_federacao">UF: </string>
+	<string name="str_data_emissao_rg">Data Emis.: </string>
+	<string name="str_pessoa_sexo">Sexo: </string>
+	<string name="str_masculino">Masculino </string>
+	<string name="str_feminino">Feminino </string>
+	<string name="str_usuario_proprietario">O usuário é Proprietário? </string>
+	<string name="str_usuario_responsavel">O usuário é Responsável? </string>
+	<string name="str_apresentou_documentacao">Apresentou Documentação? </string>
+	<string name="str_sim">Sim</string>
+	<string name="str_nao">Não</string>
+
+	<!-- Cliente Fone Atualização Cadastral -->
+	<string name="str_lista_telefones">Telefones </string>
+	<string name="str_fone_tipo">Tipo de Telefone: </string>
+	<string name="str_numero_fone">Telefone: </string>
+	<string name="error_tel_ja_selecionado">Este Telefone já foi adicionado!</string>
+	<string name="msg_tel_removido_sucesso">Telefone removido com sucesso!</string>
+
+    <!-- Aba Localidade -->
+    <string name="setorComercial">Setor Comercial:</string>
+    <string name="localidade">Localidade:</string>
+    <string name="quadra">Quadra:</string>
+    <string name="lote">Lote:</string>
+    <string name="sublote">Sublote:</string>
+    <string name="latitude">Latitude:</string>
+    <string name="longitude">Longitude:</string>
+    <string name="str_exibir_mapa">Exibir Mapa</string>
+    <string name="cabecalho_mapa">GSAN Atualização Cadastral - Editar Coordenadas</string>
+    <string name="erro_selecione_localizacao_imovel">Informe a localização geográfica do imóvel</string>
+    <string name="erro_arquivo_mapa_nao_encontrado">O arquivo de mapa da quadra não foi encontrado</string>
+    <string name="erro_quadra_nao_informada">Informe a quadra</string>
+    <string name="erro_setor_nao_informado">Informe o setor comercial</string>
+
+    <!-- Aba Fotos -->
+    <string name="str_data">Data: </string>
+    <string name="str_frente_casa">Frente da Casa</string>
+    <string name="str_hidrometro">Hidrômetro</string>
+    <string name="str_excluir">Excluir</string>
+    <string name="str_lista_ocorrencias">Lista de Ocorrências de Cadastro: </string>
+    <string name="error_ocorrencia_ja_selecionado">Esta Ocorrência de Cadastro já foi adicionada!</string>
+    <string name="msg_ocorrencia_removida_sucesso">Ocorrência de Cadastro removida com sucesso!</string>
+	<string name="msg_ocorrencia_adicionada_sucesso">Ocorrência de Cadastro adicionada com sucesso!</string>
+
+    <!-- Aba Ligacao -->
+    <string name="str_situacao_agua">Situação de Água: </string>
+    <string name="str_situacao_esgoto">Situação de Esgoto: </string>
+    <string name="str_hidrometro_agua">Hidrometro Água: </string>
+    <string name="str_numero_hidrometro">Número Hidrômetro: </string>
+    <string name="str_local_instalacao">Local Instalação: </string>
+    <string name="str_tipo_protecao">Tipo Proteção: </string>
+    <string name="str_leitura">Leitura: </string>
+    <string name="str_observacao">Observação: </string>
+    <string name="str_anormalidade_leitura">Ocorrência Hidrômetro: </string>
+
+   <!-- Menu Roteiro -->
+   <string name="finalizar_roteiro">Finalizar Roteiro</string>
+   <string name="novo_imovel">Novo Imóvel</string>
+   <string name="carregar_mapa">Carregar Mapa</string>
+   <string name="exportar_banco">Exportar Banco</string>
+   <string name="carregar_arq_dividido">Carregar Arquivo Dividido</string>
+   <string name="str_menu_trasmitir_imoveis">Transmitir Imóveis</string>
+   <string name="str_menu_relatorio">Relatórios</string>
+
+   <string name="string_verificando_informacoes_servidor_online">Verificando informações do servidor online</string>
+   <string name="str_download_progress_titulo">Carregando o arquivo. Por favor, aguarde</string>
+
+   <string name="string_versao_desatualizada">Versão desatualizada</string>
+   <string name="string_processo_atualizar_versao">O sistema vai iniciar o processo de atualização da versão</string>
+   <string name="string_baixando_nova_versao">Baixando nova versão. Por favor, aguarde&#8230;</string>
+
+   <string name="string_titulo_carregando_arquivo">Carregando arquivo on-line. Por favor, aguarde!</string>
+   <string name="string_servidor_offline">Não foi possível realizar a conexão com o servidor do GSAN.</string>
+   <string name="string_falha_conexao_carregamento_arquivo">Não foi possivel concluir o download do arquivo.</string>
+   
+   <!-- Relatorios -->
+	<string name="str_total_imoveis">Total de Imóveis (Roteiro):</string>
+	<string name="str_total_imoveis_atualizados">Total de Imóveis Atualizados:</string>
+	<string name="str_total_imoveis_incluidos">Total de Imóveis Incluídos:</string>
+	<string name="str_total_imoveis_visitados">Total de Imóveis Visitados:</string>
+	<string name="str_total_imoveis_aVisitar">Total de Imóveis a Visitar:</string>
+	<string name="str_relatorio_resumo_ocorrencia">Resumo por Ocorrência</string>
+	<string name="str_relatorio_resumo_cadastrador">Resumo por Cadastrador</string>
+	<string name="str_resumo_por_ocorrencia_cadastro">Resumo por Ocorrência de Cadastro</string>
+	<string name="str_resumo_por_cadastrador">Resumo por Cadastrador</string>
+	<string name="str_imoveis_spinner_ocorrencia">Ocorrência</string>
+	<string name="str_imoveis_spinner_cadastrador">Cadastrador</string>
+	<string name="str_legenda_barra_progresso">Percentual de Imóveis Visitados</string>
+	<string name="str_voltar">Voltar</string>
+
+	<!-- Mapa -->
+	<string name="str_focar_quadra">Focar Quadra</string>
+</resources>

@@ -1,0 +1,204 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingRight="20dp"
+    android:scrollbars="vertical"
+    tools:context=".LigacaoAbaActivity">
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="8dp" >
+
+        <!-- Situacao de Agua -->
+        <TableRow>
+
+            <TextView
+                style="@style/labelAba"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_situacao_agua"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spnSituacaoAgua"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:prompt="@string/str_situacao_agua" />
+        </TableRow>
+
+        <!-- Situacao de Esgoto -->
+        <TableRow>
+
+            <TextView
+                style="@style/labelAba"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_situacao_esgoto"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spnSituacaoEsgoto"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:prompt="@string/str_situacao_esgoto" />
+        </TableRow>
+
+        <!-- Hidrometro Agua -->
+        <TableRow>
+
+            <TextView
+                style="@style/labelAba"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_hidrometro_agua"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupHidrAgua"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/radioHidrometroAguaSim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_sim" />
+
+                <RadioButton
+                    android:id="@+id/radioHidrometroAguaNao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_nao" />
+            </RadioGroup>
+        </TableRow>
+
+        <!-- Numero Hidrometro -->
+        <TableRow android:gravity="center_vertical">
+            <TextView
+                style="@style/labelAba"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_numero_hidrometro"
+                android:textStyle="bold"
+                android:layout_marginRight="20dip"/>
+
+            <EditText
+                android:id="@+id/edtNumeroHidrometro"
+                style="@style/editAba"
+                android:layout_weight="1"
+                android:layout_marginBottom="0dp"
+                android:inputType="textVisiblePassword" />
+        </TableRow>
+
+        <!-- Local de Instalacao -->
+        <TableRow android:gravity="center_vertical" >
+
+            <TextView
+                style="@style/labelAba"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_local_instalacao"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spnLocalInstalacao"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_weight="1" />
+        </TableRow>
+
+        <!-- Tipo de Protecao -->
+        <TableRow android:gravity="center_vertical" >
+
+            <TextView
+                style="@style/labelAba"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_tipo_protecao"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spnTipoProtecao"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_weight="1" />
+        </TableRow>
+
+        <!-- Leitura -->
+        <TableRow android:gravity="center_vertical">
+
+            <TextView
+                style="@style/labelAba"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_leitura"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edtLeitura"
+                style="@style/editAba"
+                android:layout_weight="1" 
+                android:inputType="number"
+                android:layout_marginBottom="0dp"
+                android:maxLength="8"/>
+        </TableRow>
+
+        <!-- Observacao -->
+        <TableRow android:paddingBottom="5dp" >
+
+            <TextView
+                style="@style/labelAba"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_observacao"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <EditText
+            android:id="@+id/edtObservacao"
+            android:layout_height="200dp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/fundo_bg_branco"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:maxLength="400"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp" 
+            />
+        
+        <!-- Anormalidade Leitura (Ocorrência Hidrometro) -->
+        <TableRow
+            android:paddingTop="10dp"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                style="@style/labelAba"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_anormalidade_leitura"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spnAnormalidadeLeitura"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:prompt="@string/str_anormalidade_leitura" />
+        </TableRow>
+
+    </TableLayout>
+
+</ScrollView>
