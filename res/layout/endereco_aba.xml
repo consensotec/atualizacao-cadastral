@@ -1,0 +1,60 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingRight="20dp"
+    tools:context=".EnderecoAbaActivity" android:scrollbars="vertical">
+			<EditText android:layout_width="0dp" android:layout_height="0dp" android:visibility="visible"/>  
+			
+    	<TableRow  android:paddingTop="10dp" >
+        	
+	        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold" 
+					  android:text="@string/str_logradouro" android:id="@+id/logradouro" style="@style/labelAba" /> 	
+			
+			<AutoCompleteTextView android:id="@+id/autoComplete" android:layout_weight="1" android:completionThreshold="1" android:inputType="textCapCharacters"/>
+			
+			<!-- <Spinner android:layout_weight="1" android:layout_marginBottom="10dp" android:layout_height="60dp" 
+				 	 android:id="@+id/spnLogradouro" /> -->
+			
+			<Button android:text="@string/str_inserir"
+			    	android:textColor="#000000"
+				    android:id="@+id/btnInserirLogra" 
+				    android:background="@drawable/botao_bg_selector"
+				    android:layout_gravity="bottom" 
+				    android:layout_width="90dp"
+				    android:layout_marginBottom="5dp"/>
+	    </TableRow>
+	   	
+	   	<TableRow>
+	        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold" 
+					  android:text="@string/str_referencia_numero" android:id="@+id/referenciaNum" style="@style/labelAba" /> 	
+			<Spinner android:layout_weight="1" android:layout_marginBottom="10dp" android:layout_height="60dp" 
+				 	 android:id="@+id/spnReferenciaNum" />
+			<EditText android:layout_width="90dp"
+			     	  android:id="@+id/edtReferenciaNum" 
+					  style="@style/editAba" android:maxLength="5"
+					  android:inputType="textCapCharacters" />
+	    </TableRow>
+	    
+	    <TableRow>
+	        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold" 
+					  android:text="@string/str_complemento" android:id="@+id/complemento" style="@style/labelAba" /> 	
+			<EditText android:layout_weight="1"
+					  android:id="@+id/edtComplemento" 
+					  style="@style/editAba" android:maxLength="25" android:inputType="textCapCharacters" />
+	    </TableRow>
+	    
+	   	<TableRow>
+	        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold" 
+					  android:text="@string/str_bairro" android:id="@+id/bairro" style="@style/labelAba"/> 	
+			<Spinner android:layout_weight="1" android:layout_marginBottom="10dp" android:layout_height="60dp" 
+				 	 android:id="@+id/spnBairro" />
+	    </TableRow>
+	    
+	   	<TableRow android:layout_marginBottom="225dip">
+	        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold" 
+					  android:text="@string/str_cep" android:id="@+id/cep" style="@style/labelAba" /> 	
+			<Spinner android:layout_weight="1" android:layout_marginBottom="10dp" android:layout_height="60dp" 
+				 	 android:id="@+id/spnCep" />
+	    </TableRow>
+</TableLayout>

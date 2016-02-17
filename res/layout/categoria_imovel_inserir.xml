@@ -1,0 +1,98 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    tools:context=".CategoriaImovelInserirActivity" 
+    android:background="#D0D0D0">
+
+    <LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:scrollbars="vertical" >
+         
+         <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="25dp"
+            android:background="#808080"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/padding_medium"
+            android:text="@string/str_preencher_campos"
+            android:textColor="#000000"
+            android:textSize="17sp" />
+        
+        <TableLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical"
+		    android:scrollbars="vertical"    
+		    android:paddingRight="20dp">
+        	
+            <!-- Categoria -->
+            <TableRow android:paddingTop="8dp" android:paddingBottom="5dp" >
+            	
+            	<TextView android:layout_width="wrap_content" style="@style/labelAba" android:layout_height="wrap_content"
+        	    	  android:textStyle="bold" android:text="@string/str_categoria_imovel" android:id="@+id/categoriaImovel" />
+        		<Spinner android:layout_weight="1" android:layout_marginBottom="10dp" android:layout_height="60dp"
+        	    	 android:id="@+id/spnCategoriaImovel" android:layout_width="wrap_content" />
+            </TableRow>
+            
+            <!-- SubCategoria -->
+            <TableRow android:paddingBottom="5dp" >
+            	
+            	<TextView android:layout_width="wrap_content" style="@style/labelAba" android:layout_height="wrap_content"
+        	    	  android:textStyle="bold" android:text="@string/str_subcategoria_imovel" android:id="@+id/subCategoriaImovel" />
+        		<Spinner android:layout_weight="1" android:layout_marginBottom="10dp" android:layout_height="60dp"
+        	    	 android:id="@+id/spnSubCategoriaImovel" android:layout_width="wrap_content" />
+            </TableRow>
+            
+            <!-- Quantidade de Economias -->
+            <TableRow >
+	            <TextView android:layout_width="wrap_content" style="@style/labelAba" android:layout_height="wrap_content"
+	                	  android:textStyle="bold" android:text="@string/str_quantidade_economias" android:id="@+id/quantidadeEconomias" />
+	            <EditText style="@style/editAba" android:inputType="number" android:id="@+id/edtQtdEconomias" android:layout_weight="1" android:maxLength="4" />
+	        </TableRow>
+            
+        </TableLayout>
+        
+       	<View
+	    android:id="@+id/linha2"
+	    android:layout_width="fill_parent"
+	    android:layout_height="2dp"
+	    android:background="#808080"
+	    android:layout_marginLeft="20dp"     
+		android:layout_marginRight="20dp" />
+        
+        <Space android:layout_height="20dp" android:layout_width="fill_parent"/>
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:orientation="horizontal" android:layout_width="fill_parent"
+			android:layout_height="fill_parent" android:paddingLeft="20dp" 
+			android:paddingRight="20dp"
+			android:paddingTop="5dp" android:gravity="center_vertical">
+		
+		    <!-- Cancelar -->
+			<Button android:text="@string/str_cancelar"
+				    android:textColor="#000000"
+				    android:id="@+id/btCancelar" 
+				    android:layout_gravity="left"
+				    android:layout_height="wrap_content"
+				    android:layout_width="100dp" 
+				    android:background="@drawable/botao_bg_selector" />
+					
+			<Space
+			     android:layout_width="360dp"
+			     android:layout_height="wrap_content" />
+			
+			<!-- Inserir -->
+			<Button android:text="@string/str_inserir"
+				    android:textColor="#000000"
+				    android:id="@+id/btInserir" 
+				    android:layout_gravity="right"
+				    android:layout_height="wrap_content" 
+				    android:layout_width="100dp"
+				    android:background="@drawable/botao_bg_selector" />
+		</LinearLayout>
+	</LinearLayout>
+
+</ScrollView>

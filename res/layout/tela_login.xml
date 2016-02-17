@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/backgroundcompleto"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/ScrollView01"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <!-- LOGO -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/imgTopLogin"
+                    android:layout_width="fill_parent"
+                    android:layout_height="160dip"
+                    android:layout_marginTop="90dip"
+                    android:src="@drawable/logo" >
+                </ImageView>
+            </LinearLayout>
+
+            <!-- USUÁRIO -->
+            <LinearLayout
+                android:layout_width="300dip"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dip"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/label"
+                    android:text="@string/str_login_user"
+                    android:textColor="#0b2f51" >
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edtLogin"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress" >
+                </EditText>
+
+                <!-- SENHA -->
+                <TextView
+                    style="@style/label"
+                    android:text="@string/str_login_pass"
+                    android:textColor="#0b2f51" >
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edtPassword"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:password="true" >
+                </EditText>
+                
+                <!-- OU -->
+                 <TextView
+                    style="@style/label"
+                    android:gravity="center"
+                    android:text="@string/str_ou"
+                    android:textColor="#0b2f51" >
+                </TextView>
+                
+                
+                
+                 <!-- CPF -->
+                <TextView
+                    style="@style/label"
+                    android:text="@string/str_login_cpf"
+                    android:textColor="#0b2f51" >
+                </TextView>
+
+                <EditText
+                    android:id="@+id/edtCPF"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:password="true" >
+                </EditText>
+
+                <!-- BOTAO ENTRAR -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal" android:paddingTop="20dip">
+
+                    <Button
+                        android:id="@+id/btLogin"
+                        android:layout_width="100dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.7"
+                        android:background="@drawable/botao_bg_selector_login"
+                        android:text="@string/botao_login_entrar"
+                        android:textColor="#ffffff" >
+                    </Button>
+                </LinearLayout>
+				
+                <!-- VERSAO -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/label"
+                        android:id="@+id/numero"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginTop="40dip"
+                        android:paddingBottom="8pt"
+                        android:textColor="#0b2f51"
+                        android:textSize="6pt" >
+                    </TextView>
+                </LinearLayout>
+                
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -17,7 +17,7 @@
             android:layout_height="25dp"
             android:background="#808080"
             android:gravity="center_vertical"
-            android:paddingLeft="@dimen/padding_small"
+            android:paddingLeft="@dimen/padding_medium"
             android:text="@string/str_preencher_campos"
             android:textColor="#000000"
             android:textSize="17sp" />
@@ -31,12 +31,12 @@
 		    android:paddingRight="20dp">
 			
 			<TableLayout
-				  
+				  xmlns:android="http://schemas.android.com/apk/res/android"
 				  android:layout_width="match_parent"
 				  android:layout_height="wrap_content"
 				  android:paddingBottom="16dp" 
 				  android:paddingTop="10dp" >
-				 
+				
 			    <!-- Tipo Logradouro -->			    
 			    <TableRow
 				    android:layout_width="wrap_content"
@@ -70,7 +70,7 @@
 					    style="@style/editAba"
 					    android:layout_weight="1" 
 					    android:maxLength="40"
-					    android:inputType="textCapCharacters|textVisiblePassword" />
+					    android:inputType="textCapCharacters" />
 	
 				</TableRow>
 				
@@ -87,7 +87,7 @@
 						       android:id="@+id/edtnomePopLogradouro" 
 						       style="@style/editAba" 
 						       android:maxLength="30"
-						       android:inputType="textCapCharacters|textVisiblePassword" />
+						       android:inputType="textCapCharacters" />
 				</TableRow>
 			
 				<!-- Loteamento -->
@@ -98,42 +98,23 @@
 						      android:id="@+id/edtLoteamento" 
 						      style="@style/editAba" 
 						      android:maxLength="30"
-						      android:inputType="textCapCharacters|textVisiblePassword" />
+						      android:inputType="textCapCharacters" />
 				</TableRow>
 				
 				<!-- Municipio -->
-				<TableRow>
+				<TableRow android:paddingBottom="10dp">
 					<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold" 
 							  android:text="@string/str_municipio" android:id="@+id/municipio" style="@style/labelAba2" /> 
-<!-- 					<AutoCompleteTextView android:id="@+id/edtMunicipio" android:layout_weight="1" android:completionThreshold="1" android:inputType="textCapCharacters"/> -->
 					<EditText android:layout_weight="1"
-						      android:id="@+id/edtMunicipio"
-                			  android:enabled="false"
-						      style="@style/editAbaDesabilitado" />
+						      android:id="@+id/edtMunicipio" 
+						      style="@style/editAba" />
 				</TableRow>
-				
-								
-				<TableRow android:layout_width="wrap_content"
-				    android:layout_height="match_parent">
-                    <TextView
-                        android:id="@+id/bairros"
-                        style="@style/labelAba2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/str_bairros"
-                        android:textStyle="bold" />
-    
-                    <!-- Bairro -->
-                    <Spinner
-                        android:id="@+id/spnBairro"
-                        android:layout_width="fill_parent"
-                        android:layout_height="60dp"
-                         />
-                </TableRow>
-                
 			</TableLayout>
 			
-			<TableLayout 
+			<!-- Bairro -->
+			<Spinner android:layout_width="fill_parent" android:layout_marginBottom="10dp" android:layout_height="60dp" 
+		 			 android:id="@+id/spnBairro" android:paddingBottom="5dp" />  
+			<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
 				android:orientation="horizontal" android:layout_width="fill_parent"
 				android:layout_height="fill_parent" android:background="#ffffff" >
 	       		<TextView android:text="@string/str_lista_bairros"
@@ -146,55 +127,31 @@
 			     />
 				<TableLayout android:id="@+id/tabelaBairros" android:layout_width="fill_parent" android:layout_height="wrap_content" 
 							 android:stretchColumns="0" />
-				</TableLayout>	
-			
-			<TableLayout
-				  android:id="@+id/cepDesconhecido"
-				  android:layout_width="match_parent"
-				  android:layout_height="wrap_content"
-				  android:paddingBottom="16dp" 
-				  android:paddingTop="20dp" >
-				
-				<!-- CheckBox cepInvalido -->
-				<TableRow>
-				    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold" 
-							  android:text="@string/str_cep_desconhecido"  style="@style/labelAba2" /> 
-					<CheckBox 
-				    	android:id="@+id/ckBox"
-				    	android:layout_width="wrap_content"
-				    	android:layout_height="wrap_content"/>     
-				</TableRow>
-				
 			</TableLayout>	
 				
 			<!-- CEP -->
-			<LinearLayout 
+			<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 				android:orientation="horizontal" android:layout_width="fill_parent"
-				android:layout_height="fill_parent" android:layout_marginTop="10dp" >
+				android:layout_height="fill_parent" android:paddingTop="10dp" >
 				
 				<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold" 
-						  android:text="@string/str_cep" android:id="@+id/cep" style="@style/labelAba2"
-						   />
-				
+						  android:text="@string/str_cep" android:id="@+id/cep" style="@style/labelAba2" />
 				<EditText android:id="@+id/edtCep" android:maxLength="8" android:inputType="number" 
-					      style="@style/editAba" 
-					      android:layout_marginLeft="115dp"
-					      android:layout_width="280dp"
-					      />
+					      style="@style/editAba" />
 				
 				<Space android:layout_width="10dp" android:layout_height="wrap_content"/>
 				
 				<Button android:text="@string/str_adicionar"
 				    android:textColor="#000000"
 				    android:id="@+id/btAdicionarCep" 
-				    android:layout_gravity="left"   
-				    android:layout_height="60dp"
-				    android:layout_width="100dp"
+				    android:layout_gravity="left"
+				    android:layout_height="wrap_content"
+				    android:layout_width="wrap_content"
 				    android:background="@drawable/bt_branco" />
 				
 			</LinearLayout>
 			
-			<TableLayout android:id="@+id/tableLayoutCeps" 
+			<TableLayout android:id="@+id/tableLayoutCeps" xmlns:android="http://schemas.android.com/apk/res/android"
 				android:orientation="horizontal" android:layout_width="fill_parent"
 				android:layout_height="fill_parent" android:background="#ffffff" >
 	       		<TextView android:text="@string/str_lista_ceps"
@@ -217,7 +174,7 @@
 		    android:background="#808080"
 		    android:paddingLeft="20dp" />
 		
-		<LinearLayout 
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 			android:orientation="horizontal" android:layout_width="fill_parent"
 			android:layout_height="fill_parent" android:paddingLeft="10dp" 
 			android:paddingRight="10dp"

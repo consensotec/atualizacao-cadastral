@@ -15,25 +15,23 @@
 	    <!-- Data -->
 	    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent"
 	    			  android:layout_height="wrap_content" >
+	    	
 	        <TextView
-                style="@style/labelAba"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
-	            android:paddingLeft="0dip"
 	            android:text="@string/str_data"
+	            android:textSize="@dimen/padding_large"
 	            android:textStyle="bold" />
 	        
 	     	<TextView
-                style="@style/labelAba"
 	     	    android:id="@+id/tvData"
 	     	    android:layout_width="150dp"
 	     	    android:layout_height="wrap_content"
-	            android:paddingLeft="5dip" />
+	     	    android:textSize="@dimen/padding_large" />
 	        
 	    </LinearLayout>
-
+	    
 	    <TableLayout android:paddingTop="8dp" android:layout_width="match_parent" android:layout_height="wrap_content">
-            <!-- Foto Frente da Casa -->
 	        <TableRow android:gravity="center_vertical">
 	            <!-- Frente da Casa -->
 	          	<LinearLayout android:id="@+id/llFrenteCasa" android:orientation="horizontal" 
@@ -52,35 +50,24 @@
 			    	  	android:paddingLeft="6dp"/>
 	    
 	   			</LinearLayout>	
-
+	   			
 	 			<Button
-				    android:id="@+id/btnExcluirFrenteCasa"
-				    android:layout_width="90dp"
-				    android:layout_height="wrap_content"
-				    android:background="@drawable/botao_bg_selector"
-				    android:text="@string/str_excluir"
-				    android:textColor="#000000" />
-
+			    android:id="@+id/btnExcluirFrenteCasa"
+			    android:layout_width="90dp"
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="bottom"
+			    android:layout_marginBottom="5dp"
+			    android:background="@drawable/botao_bg_selector"
+			    android:text="@string/str_excluir"
+			    android:textColor="#000000" />
+	 			
 	        </TableRow>
-
-	        <!-- Linha -->
-	        <TableRow
-	            android:gravity="center_vertical"
-	            android:paddingTop="10dp"
-	            android:paddingBottom="10dp" >
-	            <View
-	                android:layout_width="fill_parent"
-	                android:layout_height="2dp"
-	                android:layout_weight="1"
-	                android:background="#A8A8A8"
-	                android:paddingLeft="20dp"
-	                android:paddingRight="20dp" />
-	        </TableRow>
-
-            <!-- Foto do Hidrômetro -->
+	        <ImageView android:src="@drawable/line" android:layout_width="fill_parent"  android:layout_height="wrap_content" />
+	        
 	        <TableRow android:gravity="center_vertical">
 	        
-			    <LinearLayout android:orientation="horizontal"
+	            <!-- Hidrômetro -->
+			    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal"
 				              android:id="@+id/llHidrometro" android:layout_weight="1" android:layout_height="wrap_content" android:gravity="center_vertical">
 			    
 			    	<ImageView android:id="@+id/imgHidrometro" android:contentDescription="@string/str_hidrometro" 
@@ -101,34 +88,24 @@
 			    	    android:id="@+id/btnExcluirHidrometro"
 			    	    android:layout_width="90dp"
 			    	    android:layout_height="wrap_content"
+			    	    android:layout_gravity="bottom"
+			    	    android:layout_marginBottom="5dp"
 			    	    android:background="@drawable/botao_bg_selector"
 			    	    android:text="@string/str_excluir"
 			    	    android:textColor="#000000" />
 			    	
 	        </TableRow>
-
-	        <!-- Linha -->
-	        <TableRow
-	            android:gravity="center_vertical"
-	            android:paddingTop="10dp"
-	            android:paddingBottom="10dp" >
-	            <View
-	                android:layout_width="fill_parent"
-	                android:layout_height="2dp"
-	                android:layout_weight="1"
-	                android:background="#A8A8A8"
-	                android:paddingLeft="20dp"
-	                android:paddingRight="20dp" />
-	        </TableRow>
+	        
+	        <ImageView android:src="@drawable/line" android:layout_width="fill_parent" android:layout_height="wrap_content" />        
 	    </TableLayout>
 	
 	    <!-- Ocorrencias -->
 	    <Spinner android:layout_width="fill_parent" android:layout_marginTop="10dp" android:layout_marginBottom="10dp" android:layout_height="60dp" 
 			 android:id="@+id/spnOcorrencias" android:paddingBottom="5dp" />  
 		
-			<TableLayout
+			<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
 				android:orientation="horizontal" android:layout_width="fill_parent"
-				android:layout_height="wrap_content" android:background="@drawable/fundo_bg_branco" >
+				android:layout_height="wrap_content" android:background="@drawable/fundobranco_bg" >
 		      		
 	      		<TextView android:text="@string/str_lista_ocorrencias"
 	      				  android:paddingTop="5dp" android:textStyle="bold" style="@style/labelAbaMenor"/>

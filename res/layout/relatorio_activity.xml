@@ -98,7 +98,7 @@
 	
      <!--A VISITAR -->
     <LinearLayout android:layout_width="fill_parent"  android:layout_height="wrap_content"
-    	android:orientation="horizontal" android:paddingLeft="6dip" android:paddingBottom="20dip">
+    	android:orientation="horizontal" android:paddingLeft="6dip">
     	
     	<TextView
 	        android:layout_width="wrap_content"
@@ -127,10 +127,9 @@
 	</LinearLayout>
    
     <!-- BARRA DE PROGRESSO -->
-	<LinearLayout android:layout_width="match_parent"  android:layout_height="30dip" 
+	<LinearLayout android:layout_width="match_parent"  android:layout_height="30dip"
     	android:orientation="horizontal"  android:background="@drawable/borders"
-    	android:layout_marginRight="10dip" android:layout_marginLeft="8dip" android:layout_marginBottom="2dip"
-    	android:baselineAligned="false">
+    	android:layout_marginRight="10dip" android:layout_marginLeft="8dip" android:layout_marginBottom="2dip">
 		
 	    
 	    <LinearLayout  android:layout_width="fill_parent" android:layout_height="fill_parent"
@@ -152,26 +151,6 @@
     	
     </LinearLayout>
 
-	<!-- Legenda barra progresso -->
-    <LinearLayout android:layout_width="fill_parent"  android:layout_height="wrap_content"
-    	android:orientation="horizontal" 
-    	android:gravity="center"  
-    	android:paddingLeft="6dip">
-	
-		<TextView
-	        android:id="@+id/legendaBarraProgresso" android:textColor="#000000"
-	        android:layout_width="wrap_content" android:textSize="20sp"
-	        android:layout_height="wrap_content"
-	        android:text="@string/str_legenda_barra_progresso"
-	        android:visibility="visible"/>
-
-	</LinearLayout>
-	
-	<LinearLayout android:id="@+id/paddingLayout" android:layout_width="fill_parent"  android:layout_height="0dp"
-    	android:orientation="horizontal" android:paddingTop="6dip" android:paddingLeft="6dip"
-    	 android:layout_weight="1" android:baselineAligned="false">
-	</LinearLayout>
-	
 	<!-- BOTÃO RESUMO POR OCORRENCIA -->
 	<LinearLayout android:layout_width="fill_parent"  android:layout_height="wrap_content" android:layout_marginTop="8dip" android:padding="3dip"
     	android:orientation="horizontal" android:paddingLeft="20dip" android:gravity="center" android:background="@drawable/fundocinza_bg">
@@ -182,6 +161,19 @@
 		    android:text="@string/str_relatorio_resumo_ocorrencia" android:layout_gravity="center" android:layout_height="65dip" />
 	    
 	</LinearLayout>
+	
+	
+	<!-- BOTÃO RESUMO POR CADASTRADOR -->
+	<LinearLayout android:id="@+id/btCadastrador" android:layout_width="fill_parent"  android:layout_height="wrap_content" android:layout_marginTop="8dip" android:padding="3dip"
+    	android:orientation="horizontal" android:paddingLeft="20dip" android:gravity="center" android:background="@drawable/fundocinza_bg">
+    		
+		<Button
+		    android:id="@+id/btRelatorioPorCadastrador"
+		    android:layout_width="240dip" android:gravity="center"
+		    android:text="@string/str_relatorio_resumo_cadastrador" android:layout_gravity="center" android:layout_height="65dip"/>
+	    
+	</LinearLayout>
+	
 	<!-- BOTÃO VOLTAR -->
 	<LinearLayout android:layout_width="fill_parent"  android:layout_height="wrap_content" android:layout_marginTop="8dip" android:padding="3dip"
     	android:orientation="horizontal" android:paddingLeft="20dip" android:gravity="center" android:background="@drawable/fundocinza_bg">

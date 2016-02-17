@@ -1,0 +1,209 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClienteAbaActivity" 
+    android:scrollbars="vertical" >
+    
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	   	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:shrinkColumns="3" 
+    	android:paddingTop="8dp" >
+            
+        <LinearLayout android:layout_width="fill_parent" 
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            
+			<!-- Tipo de Pessoa -->
+	            <TextView android:layout_width="wrap_content" style="@style/labelAba" android:layout_height="wrap_content"
+	                	  android:textStyle="bold" android:text="@string/str_pessoa_tipo" android:id="@+id/clienteTipo" android:layout_marginRight="50dip"/>
+	            
+	            <RadioGroup
+						android:id="@+id/radioGroupPessoaTipo" android:orientation="horizontal"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content" >
+	            
+		            <RadioButton
+				            android:id="@+id/radioPessoaFisica"
+				            android:layout_width="wrap_content"
+				            android:layout_height="wrap_content"
+				            android:textStyle="bold"
+				            android:text="@string/str_pessoa_fisica" />
+
+		            <RadioButton
+		                android:id="@+id/radioPessoaJuridica"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:text="@string/str_pessoa_juridica"
+		                android:textStyle="bold" />
+		    	
+		    	</RadioGroup>
+    	</LinearLayout>
+    	
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" >
+            
+            <!-- Cliente Tipo -->
+            <TextView android:layout_width="wrap_content" style="@style/labelAba" android:layout_height="wrap_content"
+	                  android:textStyle="bold" android:text="@string/str_cliente_tipo" android:layout_marginRight="48dip" android:id="@+id/tipo" />
+            <Spinner android:layout_weight="1" android:layout_marginBottom="10dp" android:layout_height="60dp" 
+					 android:id="@+id/spnTipoCliente" android:layout_width="0dp"/>
+    	</LinearLayout>
+    	
+    	<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" >
+            <!-- Documento Principal -->
+            <TextView android:layout_width="wrap_content" style="@style/labelAba" android:layout_height="wrap_content"
+                	  android:textStyle="bold" android:text="@string/str_cpf_cnpj" android:id="@+id/tvCpfCnpj" android:layout_marginRight="88dip"/>
+        	<EditText style="@style/editAba" android:inputType="number" android:id="@+id/edtCpfCnpj" android:textColor="#000000"  />    
+        </LinearLayout>
+        
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" >
+            <!-- Nome do Cliente -->
+            <TextView android:layout_width="wrap_content" style="@style/labelAba" android:layout_height="wrap_content"
+                	  android:textStyle="bold" android:text="@string/str_nome_cliente" android:id="@+id/nomeCliente" android:layout_marginRight="41dip"/>
+            <EditText style="@style/editAba" android:id="@+id/edtNomeCliente" android:maxLength="100" android:inputType="textCapCharacters" />
+        </LinearLayout>
+        
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" >
+            <!-- Data de Nascimento do Cliente -->
+            <TextView android:layout_width="wrap_content" style="@style/labelAba" android:layout_height="wrap_content"
+                	  android:textStyle="bold" android:text="@string/str_data_nascimento" android:id="@+id/dataNascimento" android:layout_marginRight="6dip"/>
+            <EditText android:paddingRight="5dip" android:paddingLeft="5dip" style="@style/editRG" android:inputType="number" android:id="@+id/edtDataNascimento" android:textColor="#000000" />
+        </LinearLayout>
+        
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" >
+			<!-- Pessoa Sexo -->
+	            <TextView android:layout_width="wrap_content" style="@style/labelAba" android:layout_height="wrap_content"
+	                	  android:textStyle="bold" android:text="@string/str_pessoa_sexo" android:id="@+id/pessoaSexo" android:layout_marginRight="140dip"/>
+	            
+	            <RadioGroup
+						android:id="@+id/rgOpcoesPessoaSexo" android:orientation="horizontal"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content" >
+	            
+		            <RadioButton
+				            android:id="@+id/radioMasculino"
+				            android:layout_width="wrap_content"
+				            android:layout_height="wrap_content"
+				            android:textStyle="bold"
+				            android:text="@string/str_masculino" />
+		 
+		    		<RadioButton
+		                android:id="@+id/radioFeminino"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:textStyle="bold"
+		                android:text="@string/str_feminino" />
+		    	</RadioGroup>
+    	</LinearLayout>
+    	
+        <!-- Linha -->
+        <LinearLayout android:layout_width="fill_parent"  android:orientation="horizontal" android:paddingLeft="35dp"  android:paddingRight="35dp"
+		     android:paddingBottom="30dp" android:paddingTop="30dp">
+		    <View
+			    android:id="@+id/linha"
+			    android:layout_width="fill_parent"
+			    android:layout_height="2dp" 
+			    android:paddingLeft="20dp"
+			    android:paddingRight="20dp"
+			    android:background="#A8A8A8"
+			     />
+	    
+    	</LinearLayout>
+        
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" >
+            <!-- RG -->
+            <TextView android:layout_width="wrap_content" style="@style/labelAba" android:layout_height="wrap_content"
+                	   android:textStyle="bold" android:text="@string/str_numero_rg" android:id="@+id/rg" android:layout_marginRight="158dip"/>
+        	<EditText style="@style/editAba" android:inputType="number" android:id="@+id/edtRg" android:paddingRight="10dip" android:maxLength="13"/>
+        </LinearLayout>
+        
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" >  	
+        	<!-- Órgão Expedidor -->
+
+        	<TextView
+        	    android:id="@+id/orgaoExpedidor"
+        	    style="@style/labelAba"
+        	    android:layout_width="wrap_content"
+        	    android:layout_height="wrap_content"
+        	    android:layout_marginRight="41dip"
+        	    android:text="@string/str_orgao_expedidor"
+        	    android:textStyle="bold" />
+
+        	<Spinner android:layout_marginBottom="10dp" android:layout_height="60dp"
+					 android:id="@+id/spnOrgaoExpedidor" android:layout_width="wrap_content" />
+        	
+        	<!-- Data Emissão RG -->
+        	<TextView android:layout_width="wrap_content" style="@style/labelAba" android:layout_height="wrap_content"
+        	    	  android:textStyle="bold" android:text="@string/str_data_emissao_rg" android:id="@+id/dataEmissaoRg" android:layout_marginRight="5dip"/>
+        	<EditText style="@style/editDataEmissao" android:inputType="number" android:id="@+id/edtDataEmissaoRg" android:textColor="#000000" android:layout_width="145dp" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" > 
+            <!-- UF -->
+        	<TextView android:layout_width="wrap_content" style="@style/labelAba" android:layout_height="wrap_content"
+        	    	  android:textStyle="bold" android:text="@string/str_unidade_federacao" android:id="@+id/uf" android:paddingRight="150dip"/>
+        	<Spinner android:layout_weight="1" android:layout_marginBottom="10dp" android:layout_height="60dip" 
+					 android:id="@+id/spnUF" android:layout_width="0dip" />
+        </LinearLayout>
+        <!-- Linha -->
+        <LinearLayout android:layout_width="fill_parent"  android:orientation="horizontal"
+		     android:layout_height="fill_parent" android:paddingLeft="35dp"  android:paddingRight="35dp"
+		     android:paddingBottom="30dp" android:paddingTop="30dp">
+		    <View
+			    android:id="@+id/linha2"
+			    android:layout_width="fill_parent"
+			    android:layout_height="2dp" 
+			    android:paddingLeft="20dp"
+			    android:paddingRight="20dp"
+			    android:background="#A8A8A8"
+			     />
+	    
+    	</LinearLayout>
+        
+        <!-- Fone Tipo -->
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <TextView android:layout_width="wrap_content" style="@style/labelAba" android:layout_height="wrap_content"
+                	  android:textStyle="bold" android:text="@string/str_fone_tipo" android:id="@+id/foneTipo" android:layout_marginRight="34dip"/>
+            <Spinner android:layout_weight="1" android:layout_marginBottom="10dp" android:layout_height="60dp"
+                	 android:id="@+id/spnFoneTipo" android:layout_width="0dp" />
+        </LinearLayout>
+        
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" >
+            
+            <!-- Telefone -->
+            <TextView android:layout_width="wrap_content" style="@style/labelAba" android:layout_height="wrap_content"
+                	  android:textStyle="bold" android:text="@string/str_numero_fone" android:id="@+id/numeroFone" 
+                	  android:layout_marginRight="120dip"/>
+            <EditText style="@style/editTelefone" android:inputType="number"
+                android:maxLength="13" android:id="@+id/edtTelefone"
+                android:textColor="#000000" />
+            
+            <Space android:layout_width="10dip" android:layout_height="wrap_content"/>
+            
+            <!-- Botão de Adicionar -->
+            <Button android:text="@string/str_adicionar" android:textColor="#000000" android:id="@+id/btAdicionarTelefone" android:layout_gravity="center"
+				    android:layout_height="wrap_content" android:layout_width="wrap_content" android:padding="5dip" android:paddingLeft="12dip" android:paddingRight="12dip" android:background="@drawable/botao_bg_selector" />
+        </LinearLayout>
+        
+		<!-- TABELA TELEFONES -->
+        <TableLayout android:id="@+id/tableLayoutTelefones" xmlns:android="http://schemas.android.com/apk/res/android"
+				android:orientation="horizontal" android:layout_width="fill_parent"
+				android:layout_height="fill_parent" android:background="@drawable/fundobranco_bg" android:layout_marginRight="10dip" android:layout_marginLeft="10dip">
+            
+        	<TextView android:text="@string/str_lista_telefones" style="@style/labelAbaMenor" android:textStyle="bold"/>
+        	
+        	<View
+			    android:id="@+id/linhaTelefone"
+			    android:layout_width="fill_parent"
+			    android:layout_height="2dp" android:layout_marginLeft="6dip" android:layout_marginRight="6dip"
+			    android:background="#394f73" />
+	       		
+				<TableLayout android:id="@+id/tabelaTelefones" android:layout_width="fill_parent" 
+				    		 android:layout_height="wrap_content" android:stretchColumns="0" />
+        </TableLayout>
+        
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginBottom="250dp" />
+        
+        
+    </TableLayout>
+</ScrollView>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+			  
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:background="@drawable/backgroundcompleto"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:background="@drawable/imovel_bg" android:minHeight="50px" android:paddingTop="7px">
+   		<Spinner android:layout_weight="0.3" android:layout_marginLeft="5px" android:id="@+id/buscaTipo" android:layout_height="wrap_content" android:layout_width="wrap_content" 
+   			android:layout_gravity="center_horizontal" android:gravity="center"/>
+   		
+   		<EditText android:layout_weight="0.5" android:id="@+id/parametroInformado" android:layout_width="120px" android:layout_height="wrap_content" android:layout_gravity="center_vertical" 
+   		    android:inputType="text"
+   			android:gravity="center" android:paddingTop="4px" android:paddingLeft="10px"/>
+   		
+   		<ImageButton android:background="#80000000" android:src="@drawable/btlupa" android:id="@+id/procurar" android:layout_width="wrap_content"
+    		android:layout_height="43px" android:layout_gravity="center" android:gravity="center" />
+   		
+   		
+   	</LinearLayout>    
+
+      <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+    android:orientation="vertical" android:layout_margin="10px"  android:layout_marginBottom="-50px">
+  
+    <LinearLayout android:background="@drawable/titulo_bg"
+    android:layout_width="wrap_content"
+    android:layout_height="30px"
+    android:orientation="vertical" >
+    <TextView android:textColor="#ffffff" android:textStyle="bold" android:textSize="14px" android:text="@string/lista"
+    android:layout_marginTop="5px" android:layout_height="wrap_content" android:paddingLeft="10px" android:paddingRight="10px" android:layout_width="wrap_content" android:layout_gravity="center"/>
+    </LinearLayout>
+   
+   <ListView android:id="@+id/listaImoveis" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+	</LinearLayout>
+		
+	
+	
+</LinearLayout>
+
+	
+

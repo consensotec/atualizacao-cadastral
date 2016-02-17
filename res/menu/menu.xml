@@ -1,29 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
-	<item android:title=""
-        android:id="@+id/menu_overflow"
-        android:icon="@drawable/ic_menu"
-        android:orderInCategory="11111"
-        android:showAsAction="always">
-	    <menu android:id="@+id/group_menu">
-	        <item android:id="@+id/novo_imovel"
-	              android:title="@string/novo_imovel" 
-	              android:showAsAction="never"/>
-	        <!-- item android:id="@+id/carregar_mapa"
-	              android:title="@string/carregar_mapa" /-->
-	        <item android:id="@+id/menu_finalizar"
-	              android:title="@string/finalizar_roteiro" 
-	              android:showAsAction="never"/>
-	        <!-- item android:id="@+id/exportar_banco"
-	              android:title="@string/exportar_banco" /-->
-	        <!-- item android:id="@+id/carregar_arq_dividido"
-	              android:title="@string/carregar_arq_dividido" /-->
-	        <!-- item android:id="@+id/trasmitir_imoveis"
-	              android:title="@string/str_menu_trasmitir_imoveis" /-->
-	        <item android:id="@+id/carregar_relatorio"
-	              android:title="@string/str_menu_relatorio" 
-	              android:showAsAction="never"/>
-	    </menu>
-	</item>
+    
+    <!-- menu group -->
+    <group android:id="@+id/group_menu">
+        <item android:id="@+id/novo_imovel"
+              android:title="@string/novo_imovel" />
+        <item android:id="@+id/carregar_mapa"
+              android:title="@string/carregar_mapa" />
+        <item android:id="@+id/menu_finalizar"
+              android:title="@string/finalizar_roteiro" />
+        <item android:id="@+id/exportar_banco"
+              android:title="@string/exportar_banco" />
+        <item android:id="@+id/carregar_arq_dividido"
+              android:title="@string/carregar_arq_dividido" />
+         <item android:id="@+id/trasmitir_imoveis"
+              android:title="@string/str_menu_trasmitir_imoveis" />
+        <item android:id="@+id/carregar_relatorio"
+              android:title="@string/str_menu_relatorio" />
+        
+    </group>
+    
 </menu>

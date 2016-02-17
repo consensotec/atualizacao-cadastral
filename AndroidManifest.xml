@@ -1,14 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.br.gsanac"
-    android:versionCode="31030"
-    android:versionName="3.1.03.0"
-	xmlns:tools="http://schemas.android.com/tools">
+    android:versionCode="22101"
+    android:versionName="2.2.10.1" 
+    android:debuggable="true" >
 
     <uses-sdk
         android:minSdkVersion="15"
-        android:targetSdkVersion="15"
-        tools:ignore="OldTargetApi"/>
-    
+        android:targetSdkVersion="15" />
+ 
     <!-- Permissions -->
     <uses-permission android:name="android.permission.SET_DEBUG_APP" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -18,6 +18,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- <uses-permission android:name="android.permission.INSTALL_PACKAGES" /> --> 
     <uses-permission android:name="android.permission.WRITE_OWNER_DATA" /> 
 	<uses-permission android:name="android.permission.READ_OWNER_DATA" />
 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -27,122 +28,205 @@
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
     <application
-        android:allowBackup="true"
-        android:icon="@drawable/icone"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:icon="@drawable/icone" 
+        >
         
-       <activity 
-           android:name="com.br.gsanac.view.LoginActivity"
-           android:screenOrientation="portrait" >
-           <intent-filter>
-               <action android:name="android.intent.action.DEFAULT"/>
-               <category android:name="android.intent.category.DEFAULT"/>
-           </intent-filter>
-       </activity>
-       
-       <activity 
-           android:name="com.br.gsanac.view.SelecionarArquivoOfflineActivity"
-           android:screenOrientation="portrait" >
-           <intent-filter>
-               <action android:name="android.intent.action.DEFAULT"/>
-               <category android:name="android.intent.category.DEFAULT"/>
-           </intent-filter>
-           
-       </activity>
+        <activity
+            android:name="com.br.gsanac.gui.EnderecoAbaActivity"
+            android:label="@string/title_activity_endereco_aba" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
 
-       <activity 
-           android:name="com.br.gsanac.view.TabsActivity"
-           android:screenOrientation="portrait" 
-           android:configChanges="orientation|screenSize"
-           >
-           <intent-filter>
-               <action android:name="android.intent.action.DEFAULT"/>
-               <category android:name="android.intent.category.DEFAULT"/>
-           </intent-filter>
-       </activity>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+       <activity android:name="com.br.gsanac.gui.SelecionarArquivoActivity" 
+           android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+       <activity android:name="com.br.gsanac.gui.SelecionarArquivoDivididoActivity" 
+           android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
-    	<activity
-    	    android:name="com.br.gsanac.view.CategoriaImovelInserirActivity" 
-    	    android:screenOrientation="portrait"
-    	    android:label="@string/cabecalho_categoria" >
+        <activity android:name="com.br.gsanac.gui.DownloadArquivoActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.br.gsanac.gui.TabsActivity"
+            android:icon="@drawable/cabecalho" 
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="editarImovel" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.br.gsanac.gui.LogradouroInserirActivity" 
+            android:screenOrientation="portrait" android:label="@string/cabecalho_logradouro">
+            <intent-filter >
+                <action android:name="android.intent.action.DEFAULT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.br.gsanac.gui.LocalidadeAbaActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.br.gsanac.gui.ClienteAbaActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.br.gsanac.gui.RoteiroActivity"
+            android:label="@string/cabecalho_roteiro"
+            android:screenOrientation="portrait" android:icon="@drawable/tab">
+            <intent-filter>
+                <action android:name="editarRoteiro" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.br.gsanac.gui.LigacaoAbaActivity"
+            android:label="@string/title_activity_ligacao_aba" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.br.gsanac.gui.ApkActivity" 
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+				<category android:name="android.intent.category.DEFAULT" />                
+            </intent-filter>
+        </activity>
+        
+        <activity 
+             android:name="com.br.gsanac.gui.DownloadApkActivity" 
+             android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.br.gsanac.gui.LoginActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.br.gsanac.gui.FotosAbaActivity"
+            android:label="@string/title_activity_fotos_aba" 
+            android:screenOrientation="portrait">
+        </activity>
+    	
+    	<activity android:name="com.br.gsanac.gui.ImovelAbaActivity" >
     	    <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
     	</activity>
     	
-    	<activity
-    	    android:name="com.br.gsanac.view.LogradouroInserirActivity"
-    	    android:screenOrientation="portrait"
-    	    android:label="@string/cabecalho_logradouro" >
+    	<activity android:name="com.br.gsanac.gui.CategoriaImovelInserirActivity" 
+    	    android:screenOrientation="portrait" android:label="@string/cabecalho_categoria" >
+    	    <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+    	</activity>
+    	
+    	<activity android:name="com.br.gsanac.gui.FinalizarRoteiroActivity"
+    	    android:screenOrientation="portrait" >
+    	    <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+    	</activity>
+    	
+    	<activity android:name="com.br.gsanac.gui.ArquivoFinalizadoActivity"
+    	    android:screenOrientation="portrait" >
+    	    <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+    	</activity>
+    	
+    	<activity android:name="com.br.gsanac.gui.RelatorioActivity"
+    	    android:screenOrientation="portrait" >
+    	    <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+    	</activity>
+    	
+    	<activity android:name="com.br.gsanac.gui.RelatorioPorOcorrenciaCadastroActivity"
+    	    android:screenOrientation="portrait" >
+    	    <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+    	</activity>
+    	
+    	<activity android:name="com.br.gsanac.gui.RelatorioPorCadastradorActivity"
+    	    android:screenOrientation="portrait" >
+    	    <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+    	</activity>
+    	
+    	<activity android:name="com.br.gsanac.gui.VersaoArquivoErradaActivity"
+    	    android:screenOrientation="portrait" >
     	    <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
     	</activity>
-    	
-    	<activity
-    	    android:name="com.br.gsanac.view.MapaActivity"
-    	    android:screenOrientation="portrait"
-    	    android:label="@string/cabecalho_mapa" >
-    	    <intent-filter>
-    	        <action android:name="android.intent.action.DEFAULT"/>
-    		    <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-    	</activity>
-    	
-    	<activity 
-    	    android:name="com.br.gsanac.view.RoteiroActivity"
-    	    android:screenOrientation="portrait" >
-    		<intent-filter>
-    		    <action android:name="android.intent.action.DEFAULT"/>
-    		    <category android:name="android.intent.category.DEFAULT"/>
-    		</intent-filter>    
-    	</activity>
-        
-    	<activity android:name="com.br.gsanac.view.RelatorioActivity"
-    	    android:screenOrientation="portrait" >
-    	    <intent-filter>
-    	        <action android:name="android.intent.action.DEFAULT" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-    	</activity>
-    	
-    	<activity android:name="com.br.gsanac.view.RelatorioPorOcorrenciaCadastroActivity"
-    	    android:screenOrientation="portrait" >
-    	    <intent-filter>
-    	        <action android:name="android.intent.action.DEFAULT" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-    	</activity>
-    	
-    	<activity 
-    	    android:name="com.br.gsanac.view.MainActivity"
-    	    android:screenOrientation="portrait" >
-    		<intent-filter>
-				<action android:name="android.intent.action.MAIN"/>
-    		    <category android:name="android.intent.category.LAUNCHER"/>
-    		</intent-filter>
-    	</activity>
-    	
-    	<activity 
-    	    android:name="com.br.gsanac.view.DownloadApkActivity"
-    	    android:screenOrientation="portrait" >
-    	    <intent-filter>
-    	        <action android:name="android.intent.action.DEFAULT"/>
-    	        <category android:name="android.intent.category.DEFAULT"/>
-    	    </intent-filter>
-    	</activity>
-    	
-    	<activity 
-    	    android:name="com.br.gsanac.view.DownloadArquivoTXTActivity"
-    	    android:screenOrientation="portrait">
-    	    <intent-filter>
-    	        <action android:name="android.intent.action.DEFAULT"/>
-    	        <category android:name="android.intent.category.DEFAULT"/>
-    	    </intent-filter>
-    	</activity>
-    		
+    	   	
+    	   	
     </application>
+
 </manifest>

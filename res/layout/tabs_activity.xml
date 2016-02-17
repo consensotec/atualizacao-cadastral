@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="#d3d3d3">
+	 	
+    <!-- Botões de Anterior e Proximo -->
+	<LinearLayout android:orientation="horizontal" android:id="@+id/barra" 
+	    
+	    android:layout_width="fill_parent" android:layout_height="wrap_content" >
+		
+	    <!-- Anterior -->
+		<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp"  android:background="@drawable/backgroundcabecalho" >
+			<!-- Anterior 
+			<Button android:textColor="#000000" android:id="@+id/anterior" android:layout_marginLeft="20dp" android:text="Anterior" android:background="@drawable/btnanterior" android:padding="10dp" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+		-->
+		<!-- Posicao /Total -->
+		<LinearLayout android:layout_marginTop="15dp"
+			 android:orientation="horizontal" android:layout_gravity="center_horizontal" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" >
+			<TextView android:layout_gravity="center" android:layout_marginTop="4dip" android:gravity="center" android:textColor="#ffffff" android:textStyle="bold"  android:id="@+id/posicao" android:textSize="12pt" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+			<TextView android:layout_marginTop="4dip" android:textColor="#ffffff" android:id="@+id/total" android:layout_height="wrap_content"  android:layout_width="wrap_content" android:layout_gravity="center" android:gravity="center" android:textSize="10pt"></TextView>
+	   	</LinearLayout>
+	   	
+		<!-- Próximo	
+	   	<LinearLayout android:layout_width="fill_parent"  android:layout_height="wrap_content" 
+		   	android:orientation="horizontal" android:gravity="right" android:layout_marginRight="10dp">
+			
+			<Button android:id="@+id/proximo" android:textColor="#000000" android:text="Próximo" android:gravity="right" android:background="@drawable/btnproximo" android:padding="10px" 
+				android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_marginRight="10dp"/>
+		</LinearLayout>
+			 -->
+		</LinearLayout>
+	</LinearLayout>
+	
+	<!-- Parte central -->
+	<TabHost android:layout_width="fill_parent"  android:layout_height="0dip"
+	   android:layout_weight="0.75"  android:id="@android:id/tabhost"
+	   android:orientation="horizontal" >
+			<LinearLayout android:orientation="vertical"
+				android:layout_width="fill_parent" android:layout_height="fill_parent" >
+				<View android:layout_width="fill_parent" android:layout_height="0.5dip"
+					android:background="#000" />
+				<TabWidget android:id="@android:id/tabs"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:layout_marginLeft="0dip" android:layout_marginRight="0dip" />
+				<View android:layout_width="fill_parent" android:layout_height="2dip"
+					android:background="#696969" />
+				<View android:layout_width="fill_parent" android:layout_height="2dip"
+					android:background="#000" />
+				
+			<!--  <ScrollView android:id="@+id/child_scroll" android:layout_width="fill_parent" android:layout_height="746dp" > 	-->	
+				 	<LinearLayout  android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">			
+						<FrameLayout android:id="@android:id/tabcontent" android:layout_width="fill_parent" android:layout_height="715dp" android:layout_marginBottom="0dp"/>
+			 			<LinearLayout android:orientation="horizontal" android:layout_gravity="bottom"
+						    android:gravity="center" android:background="@drawable/fundo_bg_rodape"
+							android:layout_width="fill_parent" android:layout_height="95sp">
+						
+			 			    <Button android:id="@+id/btnCancelar" android:drawableLeft="@drawable/icon_back" android:background="@drawable/botao_bg_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" 
+					 		android:text=" Cancelar"  style="@style/botao"  android:layout_margin="5dip" android:textColor="#000000"
+					 		android:layout_marginLeft="10dip" android:layout_marginRight="10dip" android:gravity="bottom"/>
+			 			    
+							<Button android:id="@+id/btnAtualizar" android:drawableLeft="@drawable/icon_salvar" android:background="@drawable/botao_bg_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" 
+					 		android:text=" Atualizar"  style="@style/botao"  android:layout_margin="5dip" android:textColor="#000000"
+					 		android:layout_marginLeft="10dip" android:layout_marginRight="10dip" android:gravity="bottom"/>
+				 	
+				 		</LinearLayout>	
+			 		</LinearLayout>	
+		 <!-- </ScrollView> -->
+				<!-- Botao Atualizar --> 
+			</LinearLayout>
+	</TabHost>	
+	
+</LinearLayout>
